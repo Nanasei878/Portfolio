@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+        <script>
+            // Check if PDF.js is loaded
+            if (window.pdfjsLib) {
+              // Specify the URL of your PDF file
+              var url = '/resume/resume_1.pdf';
+          
+              // Create a loading task
+              var loadingTask = pdfjsLib.getDocument(url);
+              loadingTask.promise.then(function(pdf) {
+                console.log('PDF loaded');
+                
+                // Fetch the first page
+                var pageNumber = 1;
+                pdf.getPage(pageNumber).then(function(page) {
+                  console.log('Page loaded');
+                  
+                  var scale = 1.5;
+                  var viewport = page.getViewport({scale: scale});
+          
+                  // Prepare canvas using PDF page dimensions
+                  var canvas = document.createElement('canvas');
+                  var context = canvas.getContext('2d');
+                  canvas.height = viewport.height;
+                  canvas.width = viewport.width;
+          
+                  // Render PDF page into canvas context
+                  var renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                  };
+                  var renderTask = page.render(renderContext);
+                  renderTask.promise.then(function () {
+                    console.log('Page rendered');
+                  });
+          
+                  // Append the canvas to your container
+                  document.getElementById('pdf-container').appendChild(canvas);
+                });
+              }, function (reason) {
+                // PDF loading error
+                console.error(reason);
+              });
+            } else {
+              console.log("PDF.js is not loaded");
+            }
+          </script>
+          
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="nav-link" href="/index.html">Home</a></li>
+                <li><a class="nav-link" href="/about.html">About</a></li>
+                <li><a class="nav-link" href="/resume.html">Resume</a></li>
+                <li><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+                <li><a class="nav-link" href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        </header>
+        <section class='resume'>
+            <div class=''>
+                <div class="downloadflex">
+                    <p>My Resumes:</p>
+                    <a href="#" class="button">Fullstack</a>
+                    <a href="#" class="button">Data Analyst</a>
+                    <a href="#" class="button">Data Scientist</a>
+                    <a href="#" class="button">Data Engineer</a>
+                </div>
+            </div>
+            <div>
+                <div id="pdf-container"></div>
+            </div>
+
+        </section>
+        <footer>
+            <p>&copy; 2022 Kwabena Osei-Tutu</p>
+        </footer>
+</body>
+</html>
