@@ -114,12 +114,12 @@ ul {
   .intro_h1{
     text-transform: capitalize;
     text-shadow: 2px 2px 4px #000000;
-    text-align: center;
+    text-align:left;
     font-size: xx-large;
   }
 
   .intro_p1{
-    text-align: center;
+    text-align: left;
     font-size: large;
   }
 
@@ -145,7 +145,7 @@ ul {
   }
   .grid-item-skill {
     background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
+
     padding: 10px;
     font-size: 15px;
     text-align: center;
@@ -153,11 +153,16 @@ ul {
 
   /*resume*/
 
+  .resume_image{
+    display: grid;
+    place-items: center;
+    padding-left: 10px;
+  }
+
   .downloadflex{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
     margin-bottom: 5%;
   }
   downloadflex > div{
@@ -166,16 +171,26 @@ ul {
   }
 
   .button{
-    
+    background-color:  rgba(255, 255, 255, 0.3);;
     margin: 10px;
     padding: 10px;
+    text-decoration: none;
   }
 
-  #pdf-container{
+  /*#pdf-container{
     margin-left: 15%;
-  }
+  }*/
   
   /*Portfolio*/
+
+  .project_image {
+    display: block;
+    border-radius: 4px;
+    width: 30%;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    object-fit: cover; /* This ensures the image covers the area without stretching */
+  }
+  
   .alternativebg{
     background-color: rgba(0, 0, 255, 0.3);
     margin-left: 100px;
@@ -186,10 +201,9 @@ ul {
 
   .portfoliohead{
     padding-top: 10px;
+    padding-left: 10px;
   }
-  .portfoliohead > p {
-    text-align: center;
-  }
+
 
   #project h2 {
     font-size: 6rem;

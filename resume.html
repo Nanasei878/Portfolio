@@ -6,52 +6,74 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" type="image/x-icon" href="/img/favicon.png">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
-        <script>
-            // Check if PDF.js is loaded
-            if (window.pdfjsLib) {
-              // Specify the URL of your PDF file
-              var url = '/resume/resume_1.pdf';
-          
-              // Create a loading task
-              var loadingTask = pdfjsLib.getDocument(url);
-              loadingTask.promise.then(function(pdf) {
-                console.log('PDF loaded');
-                
-                // Fetch the first page
-                var pageNumber = 1;
-                pdf.getPage(pageNumber).then(function(page) {
-                  console.log('Page loaded');
-                  
-                  var scale = 1.5;
-                  var viewport = page.getViewport({scale: scale});
-          
-                  // Prepare canvas using PDF page dimensions
-                  var canvas = document.createElement('canvas');
-                  var context = canvas.getContext('2d');
-                  canvas.height = viewport.height;
-                  canvas.width = viewport.width;
-          
-                  // Render PDF page into canvas context
-                  var renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                  };
-                  var renderTask = page.render(renderContext);
-                  renderTask.promise.then(function () {
-                    console.log('Page rendered');
-                  });
-          
-                  // Append the canvas to your container
-                  document.getElementById('pdf-container').appendChild(canvas);
-                });
-              }, function (reason) {
-                // PDF loading error
-                console.error(reason);
-              });
-            } else {
-              console.log("PDF.js is not loaded");
-            }
-          </script>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+          }
+        
+          .experience-section {
+            /*background-color: black;
+            color: white;*/
+            padding: 20px;
+          }
+        
+          .job-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+        
+          .company, .date {
+            font-size: 18px;
+            font-style: italic;
+          }
+        
+          .description {
+            font-size: 16px;
+            margin-top: 10px;
+            line-height: 1.5;
+          }
+        
+          .description ul {
+            padding-left: 20px;
+          }
+        
+          .description li {
+            margin-bottom: 10px;
+          }
+
+          .personal-projects {
+    font-size: 16px;
+  }
+
+  .personal-projects-header {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .project {
+    margin-bottom: 10px;
+  }
+
+  .project-title {
+    font-weight: bold;
+  }
+
+  .project-date {
+    float: right;
+    font-style: italic;
+  }
+
+  .project-description {
+    margin: 5px 0;
+  }
+
+  .project-tools {
+    margin-left: 20px;
+  }
+        </style>
           
     </head>
 <body>
@@ -66,19 +88,95 @@
             </ul>
         </nav>
         </header>
-        <section class='resume'>
+        <section class='alternativebg'>
             <div class=''>
+              <div >
+                <img class="resume_image"src="/img/office-workplace.png" alt="Project 1" />
+              </div>
                 <div class="downloadflex">
-                    <p>My Resumes:</p>
-                    <a href="#" class="button">Fullstack</a>
-                    <a href="#" class="button">Data Analyst</a>
-                    <a href="#" class="button">Data Scientist</a>
+                    <h1>My Resumes:</h1>
+                    <a href="/cv/KwabenaOSEI_TUTU_SD.pdf" class="button">Fullstack</a>
+                    <a href="/cv/KwabenaOSEI_TUTU_Data_Analyst_cv.pdf" class="button">Data Analyst</a>
+                    <a href="/cv/KwabenaOSEI_TUTU_Data_Scientist_cv.pdf" class="button">Data Scientist</a>
                     <a href="#" class="button">Data Engineer</a>
                 </div>
             </div>
             <div>
-                <div id="pdf-container"></div>
+              <div class="experience-section">
+                <div class="job-title">Software Developer and Teacher</div>
+                <div class="company">Linguistic Communications, Montreuil, France</div>
+                <div class="date">04/2023 - 11/2023</div>
+                <div class="description">
+                  <ul>
+                    <li>Led a team in developing and deploying serverless application using Vercel, and Supabase, resulting in reduced infrastructure costs and improved scalability.</li>
+                    <li>Architected and implemented RESTful APIs in Node.js, delivering coherent communication between front-end and back-end systems.</li>
+                    <li>Taught undergraduate courses in English Language and Information Systems, receiving consistent positive feedback from students for clear explanations and engaging teaching methods.</li>
+                  </ul>
+                </div>
+                <!-- Repeat the structure for other job positions -->
+                <div class="job-title">Data Scientist </div>
+                <div class="company">INRAE Colmar, Montreuil, France</div>
+                <div class="date">09/2020 - 01/2020</div>
+                <div class="description">
+                  <ul>
+                    <li>Constructed dashboards that were used to track periods of favourable and
+                      unfavourable weather conditions and also predict the price volatility rate from
+                      complex data sets with Python</li>
+                    <li>Developed a robust quantitative model to assess agroecosystems’ resilience to
+                      global warming. To validate the data set’s suitability for the subject matter, the
+                      model explained 83% of the information in the data set.</li>
+                    <li>Identified the resilient agroecosystems in the Grand Est region of France using
+                      pareto ranking.</li>
+                  </ul>
+                </div>
+              <div class="job-title">Software Developer and Teacher</div>
+              <div class="company"> Copeeks SAS Lannion, France</div>
+              <div class="date">05/2020 - 06/2020</div>
+              <div class="description">
+                <ul>
+                  <li>Built an astute forecasting model which predicted temperature humidity indices
+                    with a mean absolute percentage error of 5%.</li>
+                  <li>Implemented ETL pipeline with pandas for temperature humidity index
+                    calculations alongside a dashboard to visualize temperature humidity index as well
+                    as periodic weather reports with Tableau.</li>
+                  <li>Created an alert system that warns about high heat stress and also communicate
+                    heat stress patterns and precise solutions to stakeholders surging customer
+                    satisfaction up by 30%</li>
+                </ul>
+              </div>
+              <div class="job-title">Data Engineer</div>
+              <div class="company">Millicom International Cellular SA Accra, Ghana</div>
+              <div class="date">10/2014 - 09/2019</div>
+              <div class="description">
+                <ul>
+                  <li>Collected and translated 35 different types of electronic data records(EDR) from
+                    switches and delivered to the data warehouse using the Mediation platform
+                    resulting to an average increase of 4.24% in monthly revenue.</li>
+                  <li>Performed Mobile Financial Systems(MFS) integrations with over 80 different
+                    companies via the Third Party Gateway System maximizing MFS revenue by 25%.</li>
+                  <li>Designed and deployed new enterprise applications and enhanced existing
+                    enterprise applications and operating systems increasing system availability to
+                    98%.</li>
+                </ul>
+              </div>
+            
+
+            <div class="personal-projects">
+              <div class="personal-projects-header">PERSONAL PROJECTS</div>
+              <div class="project">
+                <div class="project-title">Cloud Data Warehouse <span class="project-date">07/2022</span></div>
+                <div class="project-description">ETL pipeline that extracts data from a source(Amazon S3), stages them in Redshift, and transforms data into a set of dimensional tables.</div>
+                <div class="project-tools">• Tools and Methodologies: React, Node Js(Express Js)</div>
+              </div>
+              <div class="project">
+                <div class="project-title">Car Price Predicting Application <span class="project-date">04/2022</span></div>
+                <div class="project-description">A web application that take specifications provided by user as input and predicts car price using a deployed machine learning model.</div>
+                <div class="project-tools">• Tools and Methodologies: Python(flask, numpy, pandas), Ngrok, XGBoost regressor</div>
+              </div>
             </div>
+          </div>
+
+          </div>
 
         </section>
         <footer>
