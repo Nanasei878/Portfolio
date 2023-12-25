@@ -13,8 +13,15 @@
   </head>
   <body id="body">
     <header>
-    <nav>
-        <ul>
+    <nav class="nav">
+        <div class="nav-btn" onclick="toggleMenu()">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+        <ul class="nav-list">
             <li><a class="nav-link" href="/index.html">Home</a></li>
             <li><a class="nav-link" href="/about.html">About</a></li>
             <li><a class="nav-link" href="/resume.html">Resume</a></li>
@@ -50,5 +57,11 @@
     <footer>
         <p>&copy; 2022 Kwabena Osei-Tutu</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            var navList = document.querySelector('.nav > .nav-list');
+            navList.classList.toggle('open');
+        }
+        </script>
   </body>
 </html>
