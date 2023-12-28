@@ -127,17 +127,24 @@
           
     </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a class="nav-link" href="/index.html">Home</a></li>
-                <li><a class="nav-link" href="/about.html">About</a></li>
-                <li><a class="nav-link" href="/resume.html">Resume</a></li>
-                <li><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
-                <li><a class="nav-link" href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        </header>
+  <header>
+    <nav class="nav">
+      <div class="nav-btn" onclick="toggleMenu()">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      <ul class="nav-list">
+          <li><a class="nav-link" href="/index.html">Home</a></li>
+          <li><a class="nav-link" href="/about.html">About</a></li>
+          <li><a class="nav-link" href="/resume.html">Resume</a></li>
+          <li><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+          <li><a class="nav-link" href="/contact.html">Contact</a></li>
+      </ul>
+</nav>
+  </header>
         <section class='alternativebg'>
             <div class=''>
               <div >
@@ -232,5 +239,11 @@
         <footer>
             <p>&copy; 2022 Kwabena Osei-Tutu</p>
         </footer>
+        <script>
+          function toggleMenu() {
+              var navList = document.querySelector('.nav > .nav-list');
+              navList.classList.toggle('open');
+          }
+          </script>
 </body>
 </html>
