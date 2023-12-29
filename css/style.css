@@ -413,6 +413,7 @@ padding: 5px;
          1px -1px 0 #000,  /* top right */
          1px  1px 0 #000,  /* bottom right */
         -1px  1px 0 #000;  /* bottom left */
+   padding-bottom: 50px;
 }
 
 .grid-item2 > h1 {
@@ -435,7 +436,7 @@ padding: 5px;
   }
 
   .grid-item1, .grid-item2 {
-    height: 200px; /* Further reduce the height */
+    /*height: 200px;  Further reduce the height */
   }
 
   .grid-item1 {
