@@ -395,29 +395,29 @@ padding: 5px;
     padding-bottom: 25px; /* Smaller bottom padding */
   }
   .grid-container {
-    grid-template-columns: auto; /* Stack grid items vertically */
-    row-gap: 30px; /* Smaller row gap */
+    grid-template-columns: 1fr; /* Stack the grid items vertically */
+        row-gap: 20px;
   }
 
 
   .grid-item1, .grid-item2 {
-    height: 300px; /* Smaller height for grid items */
+    height: auto; /* Smaller height for grid items */
   }
 
-  .grid-item2 > h1{
-    /* Adjust the styling of child divs for smaller screens */
-    margin-top: 15%; /* Example adjustment */
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 5px; /* Example adjustment */
-  }
+  .grid-item2 {
+    padding-top: 50px;
+    font-size: medium; /* Adjust font size for readability */  
+    color: white;
+    text-shadow: 
+        -1px -1px 0 #000,  /* top left */
+         1px -1px 0 #000,  /* top right */
+         1px  1px 0 #000,  /* bottom right */
+        -1px  1px 0 #000;  /* bottom left */
+}
 
-  .grid-item2 > p{
-    /* Adjust the styling of child divs for smaller screens */
-    margin-left: 10%;  /* Example adjustment */
-    margin-right: 10%;
-    padding: 5px; /* Example adjustment */
-  }
+.grid-item2 > h1 {
+  padding-left: 15%;
+}
 
 
   .flex-container {
@@ -438,6 +438,18 @@ padding: 5px;
     height: 200px; /* Further reduce the height */
   }
 
+  .grid-item1 {
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+}
+
+.me_image img {
+  width: 350px;
+}
+ /* .grid-item2 > h1, p {
+    text-align: center;
+    font-size: small;
+  }*/
   .flex-container {
     /* Stack flex items vertically on smaller screens */
     flex-direction: column;
@@ -523,5 +535,58 @@ padding: 5px;
     padding: 3px;
   }
 
+  .intro {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .intro_h1 {
+    font-size: large; /* Smaller font size for headings */
+    text-align: center; /* Center align the headings */
+  }
+
+  .intro_p1 {
+    font-size: medium; /* Adjust font size for paragraph */
+    text-align: justify; /* Justify text for better readability */
+  }
+
+  .intro_div p::first-letter {
+    font-size: x-large; /* Adjust the first letter size */
+  }
+
+  /*.intro_image img {
+    width: 100%; /* Adjust image width to be responsive */
+   /* height: auto; /* Maintain aspect ratio */
+ /* }*/
+
+  .responsive {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .skillset {
+    padding: 2%; /* Reduce padding */
+  }
+
+  .grid-container {
+    grid-template-columns: auto;
+    row-gap: 20px;
+}
+
+  .grid-container-skills {
+    grid-template-columns: auto auto; /* Adjust grid columns for smaller screens */
+    padding: 5px;
+    gap: 5px;
+  }
+
+  .grid-item-skill {
+    font-size: 12px; /* Reduce font size in skill items */
+    padding: 5px;
+  }
+ /* .intro_image img {
+    max-width: 100%;
+    height: auto;
+}*/
 }
 

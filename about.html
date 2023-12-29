@@ -11,6 +11,7 @@
     />
     </head>
     <body>
+        <div id="body">
         <header>
             <nav class="nav">
               <div class="nav-btn" onclick="toggleMenu()">
@@ -41,8 +42,8 @@
                         </p>
                     </div>
                     <div>
-                        <div class="intro_image " >
-                            <img  src="/img/intro.png" alt="my photo" width="300px" height="300"/>
+                        <div class="intro_image" >
+                            <img  src="/img/intro.png" alt="my photo" class="responsive" width="300px" height="300"/>
                         </div>
                     </div>
                 </div>
@@ -75,6 +76,7 @@
         <footer>
             <p>&copy; 2022 Kwabena Osei-Tutu</p>
         </footer>
+    </div>
         <script>
             function toggleMenu() {
                 var navList = document.querySelector('.nav > .nav-list');
