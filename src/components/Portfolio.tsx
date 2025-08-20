@@ -48,7 +48,7 @@ const Portfolio = () => {
     },
     {
       title: "KNG Fresh Cleaning Services Website",
-      image: "/public/lovable-uploads/kng.jpg",
+      image: "/lovable-uploads/kng.jpg",
       link: "https://kngfreshcleaning.com/",
       type: "web"
     },
