@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Folder, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -24,24 +24,31 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
+              <a href="#contact">
               <Button size="lg" className="hover-scale">
                 <Mail className="mr-2 h-5 w-5" />
                 Get In Touch
               </Button>
+              </a>
+              
+              <a href="#portfolio">
               <Button variant="outline" size="lg" className="hover-scale">
-                <Github className="mr-2 h-5 w-5" />
+                <Folder className="mr-2 h-5 w-5" />
                 View Projects
               </Button>
+            </a>
+          
             </div>
             
+            
             <div className="flex space-x-6">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://github.com/Nanasei878" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github className="h-6 w-6" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/kwabena-osei-tutu-1b6009a0/" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:kwabena.oseitutu@etu.unilasalle.fr" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-6 w-6" />
               </a>
             </div>

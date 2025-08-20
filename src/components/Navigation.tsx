@@ -30,9 +30,13 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold text-primary">
-            Kwabena Osei-Tutu
-          </div>
+          <a href="/" aria-label="Home">
+            <img
+              src="/lovable-uploads/1730a2e0-63c0-429b-8d4d-1d2776112547.png"
+              alt="Kwabena Osei-Tutu's Portfolio Logo"
+              className="h-8 w-8" // Adjust size as needed
+            />
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">

@@ -6,7 +6,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Sales Dashboard",
-      image: "/lovable-uploads/Sales Dashboard.png",
+      image: "/lovable-uploads/SalesDashboard.png",
       link: "https://public.tableau.com/app/profile/kwabena.osei.tutu/viz/SalesDashboard_16702086220270/SalesDashboard",
       type: "tableau"
     },
@@ -18,7 +18,7 @@ const Portfolio = () => {
     },
     {
       title: "Syntaxmap Web App",
-      image: "/lovable-uploads/syntaxmap.png",
+      image: "/lovable-uploads/syntaxmap.PNG",
       link: "https://syntax-map-pro-front.vercel.app/",
       type: "web"
     },
