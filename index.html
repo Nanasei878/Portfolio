@@ -1,63 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>KOT</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <title>Kwabena Osei-Tutu - Data Professional & Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Kwabena Osei-Tutu - Data Enthusiast and Full Stack Developer with expertise in data science, machine learning, and web development" />
+    <meta name="author" content="Kwabena Osei-Tutu" />
+
+    <meta property="og:title" content="Kwabena Osei-Tutu - Data Professional & Full Stack Developer" />
+    <meta property="og:description" content="Portfolio of Kwabena Osei-Tutu - Data Enthusiast and Full Stack Developer with expertise in data science, machine learning, and web development" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+	 <link rel="icon" href="/lovable-uploads/fav.png" type="image/png">
   </head>
+
   <body>
-    <div  id="body">
-    <header>
-      <nav class="nav">
-        <div class="nav-btn" onclick="toggleMenu()">
-            <label for="nav-check">
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-          </div>
-        <ul class="nav-list">
-            <li><a class="nav-link" href="/index.html">Home</a></li>
-            <li><a class="nav-link" href="/about.html">About</a></li>
-            <li><a class="nav-link" href="/resume.html">Resume</a></li>
-            <li><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
-            <li><a class="nav-link" href="/contact.html">Contact</a></li>
-        </ul>
-	</nav>
-    </header>
-    <main>
-	<section id='me'>
-        <div class="grid-container">
-            <div class="me_image grid-item1 animate__animated animate__bounceInLeft" >
-                <img  src="/img/me.png" alt="my photo"/>
-            </div>
-            <div class="grid-item2 animate__animated animate__bounceInRight">
-		    <h1>Kwabena Osei-Tutu</h1>
-            <p> I'm a Full stack developer & a Data professional </p>
-            <div class="flex-container">
-                <a  href="https://www.linkedin.com/in/kwabena-osei-tutu-1b6009a0/" target="_blank">
-                <img src="/img/LinkedIn_.png" alt="linkedin"/>
-                </a>
-            </div>
-            </div>
-        </div>
-	</section>
-    </main>
-    <footer>
-        <p>&copy; 2022 Kwabena Osei-Tutu</p>
-    </footer>
-  </div>
-    <script>
-      function toggleMenu() {
-          var navList = document.querySelector('.nav > .nav-list');
-          navList.classList.toggle('open');
-      }
-      </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
