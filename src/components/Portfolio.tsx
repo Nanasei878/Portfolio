@@ -41,6 +41,18 @@ const Portfolio = () => {
       type: "github"
     },
     {
+      title: "EIM Consult Ltd Website",
+      image: "/lovable-uploads/eim.jpeg",
+      link: "https://www.eimconsultld.com/",
+      type: "web"
+    },
+    {
+      title: "KNG Fresh Cleaning Services Website",
+      image: "/public/lovable-uploads/kng.jpg",
+      link: "https://kngfreshcleaning.com/",
+      type: "web"
+    },
+    {
       title: "Sales Agents report tool for MTN Sierra Leone",
       image: "/lovable-uploads/74a3b688-f647-42ca-8211-e1fa86a42777.png",
       link: "#",
